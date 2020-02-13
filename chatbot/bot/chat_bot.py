@@ -61,7 +61,7 @@ def check_message(client, msg):
     reply_msg = msg.reply_to_message
     if NAME.lower() in msg.text.lower():
         return True
-    if reply_msg:
+    if reply_msg and reply_msg.from_user is not None:
         if reply_msg.from_user.is_self:
             return True
     return False
@@ -90,5 +90,3 @@ def chatbot(client, message):
         msg.reply_text(response)
     except CFError as e:
         app.send_message(chat_id=msg.chat.id, text=f"An error occurred:\n`{e}`", parse_mode="md")
-
-app.run()
