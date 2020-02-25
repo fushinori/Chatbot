@@ -35,7 +35,6 @@ def add_user(client, message):
     user_id = message.reply_to_message.from_user.id
     is_user = db.is_user(user_id)
     if not is_user:
-        global api_client
         ses = api_client.create_session()
         ses_id = str(ses.id)
         expires = str(ses.expires)
@@ -81,7 +80,6 @@ def chatbot(client, message):
         return
     sesh, exp = db.get_ses(user_id)
     query = msg.text
-    global api_client
     if int(exp) < time():
         ses = api_client.create_session()
         ses_id = str(ses.id)
