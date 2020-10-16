@@ -14,10 +14,12 @@ Open up your terminal and run these commands.
 
 ### Non-Heroku users
 Edit ```NAME``` in ```generate_session.py```
+
 • ```python3 generate_session.py```
 
 ### Heroku users
 • ```python3 string_session.py```
+
 You'll be asked to enter your phone number and 2FA password (if any). Copy and save the string session you get in the end.
 
 ### Two possible ways of going forward
