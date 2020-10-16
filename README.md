@@ -12,6 +12,11 @@ Open up your terminal and run these commands.
 
 • Now make a copy of ```sample_config.ini``` and rename it to ```config.ini``` and enter your ```api_id``` and ```api_hash```. These can be obtained from [here](https://my.telegram.org).
 
+### Non-Heroku users
+Edit ```NAME``` in ```generate_session.py```
+• ```python3 generate_session.py```
+
+### Heroku users
 • ```python3 string_session.py```
 You'll be asked to enter your phone number and 2FA password (if any). Copy and save the string session you get in the end.
 
@@ -23,9 +28,11 @@ Now you can use environment variables.
 
 Add the following ones as well.
 
-• ```STRING_SESSION```: The string session you got earlier.
+• ```SESSION_NAME```: If you ran ```generate_session.py```, the name of the session you created.
 
-• ```CF_API_KEY```: You can get this API key from [here](https://t.me/IntellivoidDev).
+• ```STRING_SESSION```: The string session (Only for Heroku users).
+
+• ```CF_API_KEY```: You can get this API key from [here](https://coffeehouse.intellivoid.net)
 
 • ```DATABASE_URL```: The URL of your SQL database. It should look something like this - ```sqldbtype://username:pw@hostname:port/db_name```.
 PostgreSQL is recommended.
