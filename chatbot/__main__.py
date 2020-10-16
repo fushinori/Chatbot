@@ -1,14 +1,17 @@
+import asyncio
 import sys
-from chatbot import app, LOGGER
 
+from pyrogram import idle
+from chatbot import app, LOGGER
 from chatbot.bot import chat_bot
 
-if len(sys.argv) not in (1, 3, 4):
-    quit(1)
-else:
-    app.start()
+
+async def start_bot() -> None:
+    await app.start()
     LOGGER.info("Simple chatbot written using the pyrogram library.\n " \
     "Uses Intellivoid's Coffeehouse API.\n" \
     "Written by @TheRealPhoenix on Telegram.")
     LOGGER.info("Your bot is now online. Check .help for help!")
-    app.idle()
+    await idle()
+
+asyncio.get_event_loop().run_until_complete(start_bot())

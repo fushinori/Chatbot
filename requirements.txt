@@ -1,6 +1,6 @@
 coffeehouse
 configparser
 psycopg2
-pyrogram==0.16.0
+Pyrogram==1.0.7
 sqlalchemy
 TgCrypto==1.2.0
