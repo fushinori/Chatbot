@@ -24,14 +24,14 @@ if ENV:
     CF_API_KEY = os.environ.get("CF_API_KEY")
     DATABASE_URL = os.environ.get("DATABASE_URL")
     NAME = os.environ.get("NAME")
-    
+
 else:
     from configparser import ConfigParser
-    
+
     parser = ConfigParser()
     parser.read("config.ini")
     config = parser["config"]
-    
+
     SESSION_NAME = config.get("SESSION_NAME")
     STRING_SESSION = config.get("STRING_SESSION")
     CF_API_KEY = config.get("CF_API_KEY")
