@@ -1,3 +1,6 @@
+# IMPORTANT
+Since the API has been [discontinued](https://t.me/Intellivoid/559), this will no longer work. 
+
 # About
 A fun telegram userbot written in python3 using [Intellivoid](https://github.com/intellivoid)'s Coffeehouse API.
 Written by [this person](https://t.me/TheRealPhoenix)!
